@@ -4,6 +4,9 @@ const WethAbi = [
   "function deposit() public payable",
   "function withdraw(uint wad) public",
   "function approve(address guy, uint wad) public returns (bool)",
+  "function transfer(address dst, uint wad) public returns (bool)",
+  "function transferFrom(address src, address dst, uint wad) public returns (bool)",
+  "function balanceOf(address guy) public view returns (uint)",
   "function allowance(address owner, address spender) public view returns (uint256)",
 ];
 
