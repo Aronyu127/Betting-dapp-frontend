@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Betting-dapp-frontend/static/css/main.7bf7738d.css",
-    "main.js": "/Betting-dapp-frontend/static/js/main.e5a23161.js",
+    "main.js": "/Betting-dapp-frontend/static/js/main.8240a3c8.js",
     "static/js/787.e73a5041.chunk.js": "/Betting-dapp-frontend/static/js/787.e73a5041.chunk.js",
     "static/media/bg-1.png": "/Betting-dapp-frontend/static/media/bg-1.5411575bcf31f6f46584.png",
     "index.html": "/Betting-dapp-frontend/index.html",
     "main.7bf7738d.css.map": "/Betting-dapp-frontend/static/css/main.7bf7738d.css.map",
-    "main.e5a23161.js.map": "/Betting-dapp-frontend/static/js/main.e5a23161.js.map",
+    "main.8240a3c8.js.map": "/Betting-dapp-frontend/static/js/main.8240a3c8.js.map",
     "787.e73a5041.chunk.js.map": "/Betting-dapp-frontend/static/js/787.e73a5041.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bf7738d.css",
-    "static/js/main.e5a23161.js"
+    "static/js/main.8240a3c8.js"
   ]
 }
