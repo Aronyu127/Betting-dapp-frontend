@@ -10,7 +10,6 @@ function App() {
   const [betContract, setbetContract] = useState();
   const [withdrawError, setWithdrawError] = useState("");
   const [withdrawSuccess, setWithdrawSuccess] = useState("");
-  const [transactionData, setTransactionData] = useState("");
   const [inputAmount, setIntputAmount] = useState(0);
   const [wInputAmount, setwIntputAmount] = useState(0);
   const [wContract, setwContract] = useState();
@@ -149,7 +148,6 @@ function App() {
       const resp = await betContractWithSigner.bet(inputAmountToWei, boolean);
       console.log(resp);
       setWithdrawSuccess("Operation succeeded!");
-      setTransactionData(resp.hash);
     } catch (err) {
       console.error(err.message);
       setWithdrawError(err.message);
@@ -226,6 +224,11 @@ function App() {
             </div>
             <div className="box address-box">
               <div className="columns">
+                <div className="column">
+                  <a href={`https://sepolia.etherscan.io/address/0x3e1ea0A4684e87c92BDfc4CD953689D70C4A8976`} target="_blank" rel="noopener noreferrer">BetContract Address: 0x3e1ea0A4684e87c92BDfc4CD953689D70C4A8976</a>
+                </div>
+              </div>
+              <div className="columns">
                 <div className="column is-four-fifths">
                   <input
                     className="input is-medium"
@@ -245,15 +248,13 @@ function App() {
                     No
                   </button>
                 </div>
-                
-                
               </div>
               <div className="columns">
-                <div className="column">
-                  <p>Current Address Bet</p>
-                  <p>Yes: {myYesBet} ether; No: {myNoBet} ether</p>
+                  <div className="column">
+                    <p>Current Address Bet</p>
+                    <p>Yes: {myYesBet} ether; No: {myNoBet} ether</p>
+                  </div>
                 </div>
-              </div>
               <article className="panel is-grey-darker">
                 <p className="panel-heading">
                   Weth Helper 
@@ -281,6 +282,7 @@ function App() {
                         withdraw
                       </button>
                     </div>
+                    
                   </div>
                 </div>
               </article>
