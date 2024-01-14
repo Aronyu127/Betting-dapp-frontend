@@ -154,6 +154,16 @@ function App() {
     }
   };
 
+  const claim = async () => {
+    try {
+      const betContractWithSigner = betContract.connect(signer);
+      const resp = await betContractWithSigner.claim(walletAddress);
+      console.log(resp);
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
+
   const deposit = async () => {
     const wInputAmountToWei = ethers.utils.parseUnits(wInputAmount.toString());
     try {
@@ -214,6 +224,9 @@ function App() {
             <p>Stop Bet Time: 2024/01/13 00:00:00</p>
             <p>Result Reveal Time: 2024/01/14 00:00:00</p>
             <p>Current WethAllowance: {wethAllowance} </p>
+            <button className="button is-success is-medium" onClick={claim} disabled={walletAddress ? false : true}>
+              Claim
+            </button>
             <div className="mt-5">
               {withdrawError && (
                 <div className="withdraw-error">{withdrawError}</div>
